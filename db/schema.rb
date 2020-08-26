@@ -10,10 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_235509) do
+ActiveRecord::Schema.define(version: 2020_08_26_004843) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "purchase_requests", force: :cascade do |t|
+    t.bigint "watch_id", null: false
+    t.bigint "user_id", null: false
+    t.integer "desired_price"
+    t.boolean "purchase_approved"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_purchase_requests_on_user_id"
+    t.index ["watch_id"], name: "index_purchase_requests_on_watch_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -27,4 +38,19 @@ ActiveRecord::Schema.define(version: 2020_08_25_235509) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "watches", force: :cascade do |t|
+    t.string "brand"
+    t.integer "model_year"
+    t.integer "price"
+    t.string "condition"
+    t.string "reference_number"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_watches_on_user_id"
+  end
+
+  add_foreign_key "purchase_requests", "users"
+  add_foreign_key "purchase_requests", "watches"
+  add_foreign_key "watches", "users"
 end
