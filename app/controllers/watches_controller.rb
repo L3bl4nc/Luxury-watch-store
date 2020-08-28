@@ -14,10 +14,6 @@ class WatchesController < ApplicationController
 
 	def create
 		@watch = Watch.new(watch_params)
-		if condition
-			
-		end
-		
 		@watch.save
 	end
 	
