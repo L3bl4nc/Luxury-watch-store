@@ -1,0 +1,13 @@
+<%= form_for(@watch) do |f| %>
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+  <%= f.label :reference_number %>
+  <%= f.number_field :reference_number %>
+  <%= f.label :model_year %>
+  <%= f.number_field :model_year %>
+  <%= f.label :condition %>
+  <%= f.text_field :condition %>
+  <%= f.label :price %>
+  <%= f.number_field :price %>
+  <%= f.submit %>
+<% end %>
