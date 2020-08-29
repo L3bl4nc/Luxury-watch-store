@@ -15,9 +15,12 @@ class WatchesController < ApplicationController
   def create
     @watch = Watch.find(watch_params)
     @watch.save
-
-    redirect_to watches_path
-
+    
+    if @watch.save
+      redirect_to watches_path
+    else
+      render :new
+    end
   end
 
   private

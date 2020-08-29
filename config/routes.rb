@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "/watches", to: "watches#index"
   get "/watches/new", to: "watches#new"
   post "/watches", to: "watches#create"
-  get "/watches/:id", to: "watches#show"
+  get "/watches/:id", to: "watches#show", as: "watch"
 
   get "/watches/:watch_id/purchase_requests/new", to: "purchase_requests#new"
   post "/watches/:watch_id/purchase_requests", to: "purchase_requests#create"
