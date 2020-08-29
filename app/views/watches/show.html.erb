@@ -1,8 +1,17 @@
-<!-- show image of watch -->  
-<img src="https://res.cloudinary.com/dnygdmomh/image/upload/v1598713997/Watches/Rolex_Datejust_akxpza.jpg" alt="Rolex watch">
-<h2><%= @watch.brand %></h2>
-<p><%= @watch.reference_number %></p>
-<p><%= @watch.model_year %></p>
-<p><%= @watch.price %></p>
-<p><%= @watch.condition %></p>
-<%= link_to 'Back', root_path %>
+<div class="container" id="container_show">
+	<div class="card-product" id="card_product_show">
+		<img src="https://res.cloudinary.com/dnygdmomh/image/upload/v1598713997/Watches/Rolex_Datejust_akxpza.jpg" alt="Rolex watch">
+		<div class="card-product-infos">
+			<h5 class="card-title">Brand: <%= @watch.brand %></h5>
+			<p class="card-text">Reference number: <%= @watch.reference_number %></p>
+			<p class="card-text">Model year: <%= @watch.model_year %></p>
+			<p class="card-text">Price: <%= @watch.price %>$</p>
+			<p class="card-text">Condition: <%= @watch.condition %></p>
+			<hr>
+			<%= simple_form_for ( @watch ) do |f| %>
+  			<%= f.input :price %>
+				<%= f.submit "Submit bid", class: "btn btn-primary" %>
+			<% end %>
+		</div>
+	</div>
+</div>
