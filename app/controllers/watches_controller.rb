@@ -13,9 +13,9 @@ class WatchesController < ApplicationController
   end
 
   def create
-    @watch = Watch.find(watch_params)
-    @watch.save
-    
+    @watch = Watch.new(watch_params)
+		@watch.user = current_user
+		
     if @watch.save
       redirect_to watches_path
     else
@@ -26,6 +26,6 @@ class WatchesController < ApplicationController
   private
 
   def watch_params
-    params.require(:watch).permit(:brand, :reference_number, :model_year, :price, :condition)
+    params.require(:watch).permit(:brand, :reference_number, :model_year, :price, :condition, :photo)
   end
 end
