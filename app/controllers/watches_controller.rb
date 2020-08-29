@@ -4,7 +4,6 @@ class WatchesController < ApplicationController
 	end
 	
 	def show
-		#(params[:id])
 		@watch = Watch.find(params[:id])
 	end
 
@@ -22,5 +21,4 @@ class WatchesController < ApplicationController
 	def watch_params
 		params.require(:watch).permit(:brand, :model_year, :price, :condition, :reference_number, :photo)
 	end
-	
 end
