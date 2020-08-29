@@ -6,11 +6,11 @@ user_vincent = User.find(1)
 
 3.times do 
   watch = Watch.new(brand: 'Rolex',
-                       model_year: 1989, 
-                       price: 10000, 
-                       condition: 'Prestine',
-                       reference_number: reference_number.sample,
-                      )
+                    model_year: 1989, 
+                    price: 10000, 
+                    condition: 'Prestine',
+                    reference_number: reference_number.sample,
+                   )
   watch.user = user_vincent
   watch.save
 end

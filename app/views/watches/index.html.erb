@@ -1,14 +1,16 @@
 <div class="container">
   <div class="cards">
     <% @watches.each do |watch| %>
-    <div class="card-product">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-product-infos">
-        <h2><%= watch.brand %></h2>
-        <p><%= watch.condition %></p>
-        <p><%= watch.price %>$</p>
-      </div>
-    </div>
+      <%= link_to(watch_path(watch)) do %>
+        <div class="card-product">
+          <%= cl_image_path("https://res.cloudinary.com/dnygdmomh/image/upload/v1598713997/Watches/Rolex_Datejust_akxpza.jpg", height: 200, crop: :fill) %>
+          <div class="card-product-infos">
+            <h2><%= watch.brand %></h2>
+            <p><%= watch.condition %></p>
+            <p><%= watch.price %>$</p>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>

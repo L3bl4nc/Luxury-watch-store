@@ -21,5 +21,4 @@ class WatchesController < ApplicationController
 	def watch_params
 		params.require(:watch).permit(:brand, :model_year, :price, :condition, :reference_number, :photo)
 	end
-	
 end
