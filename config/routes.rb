@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
+
   get "/watches", to: "watches#index"
   get "/watches/new", to: "watches#new"
   post "/watches", to: "watches#create"
