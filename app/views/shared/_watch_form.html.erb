@@ -1,12 +1,12 @@
 <div class="container" >
-<h1>Sell your watch</h1>
-<%= simple_form_for ( @watch ) do |f| %>
-  <%= f.input :brand %>
-  <%= f.input :reference_number %>
-  <%= f.input :condition %>
-  <%= f.input :price %>
-  <%= f.input :model_year %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit watch", class: "btn btn-primary" %>
-<% end %>
+  <h1>Sell your watch</h1>
+  <%= simple_form_for ( @watch ) do |f| %>
+    <%= f.input :brand %>
+    <%= f.input :reference_number %>
+    <%= f.input :condition %>
+    <%= f.input :price %>
+    <%= f.input :model_year %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Submit watch", class: "btn btn-primary" %>
+  <% end %>
 </div>
