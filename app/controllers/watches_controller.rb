@@ -1,7 +1,11 @@
 class WatchesController < ApplicationController
 
   def index
-    @watches = Watch.all
+    if params[:query].present?
+      @watches = Watch.where("brand ILIKE :query", query: "%#{params[:query]}%")
+    else
+      @watches = Watch.all
+    end
   end
 
   def show
