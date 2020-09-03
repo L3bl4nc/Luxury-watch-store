@@ -1,4 +1,6 @@
 <div class="container col-lg-3" id="user_form">
+  <%= render "devise/shared/title_logo" %>
+  
   <h2>Resend unlock instructions</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
