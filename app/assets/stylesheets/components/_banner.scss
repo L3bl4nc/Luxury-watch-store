@@ -1,9 +1,28 @@
 .banner {
-  color: red;
   // background-image: url(https://source.unsplash.com/random);
-  background-image: asset-url('the-name-of-your-file.extension-of-your-file')
+  background-image: asset-url('watch-homepage-banner.jpg');
+  background-position: center;
   height: 600px;
   background-size: cover;
-}
+  margin: 20px;
+  border-bottom-left-radius: 80px 80px;
+  border-right: thick double #32a1ce;
+  p {font-family: $headers-font}
+  }
+
+.banner h1 {
+  color: white;
+  font-size: 90px;
+  }
+
+.banner-container {
+  // margin-top: 20px;
+  // margin-bottom: 20px;
+  // to test:
+  // border: 5px solid green;
+  padding: 80px 50px 20px 90px;
+  }
+
+
 
 // add linear gradient
