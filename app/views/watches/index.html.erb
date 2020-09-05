@@ -13,7 +13,7 @@
     <% @watches.each do |watch| %>
       <%= link_to(watch_path(watch)) do %>
         <div class="card-product">
-          <img src="https://res.cloudinary.com/dnygdmomh/image/upload/v1598713997/Watches/Rolex_Datejust_akxpza.jpg" alt="Rolex watch">
+          <%= cl_image_tag watch.photo.key %>
           <div class="card-product-infos">
             <h2><%= watch.brand %></h2>
             <p><%= watch.condition %></p>
