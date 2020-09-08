@@ -47,11 +47,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  position: relative;
+  // justify-content
 }
 
 .card-product img {
   height: 100%;
-  width: 200px;
+  width: 40%;
   object-fit: cover;
 }
 
@@ -70,6 +72,20 @@
 
 .card-product .card-product-infos {
   padding: 16px;
-  text-align: left;
-  margin-left: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 20%;
 }
+
+.btn-primary {
+  border-radius: 25px!important;
+}
+  // background padding
+  // use borders to visualize
+  // change button color to dial
+  .form-control.is-valid {
+    border-color: silver!important;
+    border-radius: 25px!important;
+  }
