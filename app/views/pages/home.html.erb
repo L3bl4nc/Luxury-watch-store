@@ -1,6 +1,9 @@
 <div class="banner">
   <div class="banner-container">
     <h1>Luxury Watches</h1>
+    <div class="row">
+      <div class="col-3">
+      <div class="searchbar-form">
       <%= form_tag watches_path, method: :get do %>
         <%= text_field_tag :query,
           params[:query],
@@ -9,7 +12,12 @@
         %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
+      </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- enter bootstrap classes to work on search bar -->
 
 
