@@ -1,6 +1,10 @@
 <div class="container" id="container_show">
 	<div class="card-product" id="card_product_show">
-		<%= cl_image_tag @watch.photo.key %>
+		<% if @watch.photo.key? %>
+			<%= cl_image_tag @watch.photo.key %>
+		<% else %>
+			<%= cl_image_tag("Watches/Rolex_Datejust_akxpza.jpg") %>
+		<% end %>
 		<div class="card-product-infos">
 			<h3 class="card-title">Brand: <%= @watch.brand %></h3>
 			<p class="card-text">Reference number: <%= @watch.reference_number %></p>

@@ -15,7 +15,11 @@
     <% @watches.each do |watch| %>
       <%= link_to(watch_path(watch)) do %>
         <div class="card-product">
-          <%= cl_image_tag watch.photo.key %>
+          <% if watch.photo.key? %>
+            <%= cl_image_tag watch.photo.key %>
+          <% else %>
+            <%= cl_image_tag("Watches/Rolex_Datejust_akxpza.jpg") %>
+          <% end %>
           <div class="card-product-infos">
             <h2><%= watch.brand %></h2>
             <p><%= watch.condition %></p>
