@@ -1,19 +1,25 @@
 <div class="container">
-  <%= form_tag watches_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a watch"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+  <form class="form-inline justify-content-center">
+    <%= form_tag watches_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control mr-sm-2",
+        placeholder: "Find a watch"
+      %>
+    <%= submit_tag "Search", class: "btn btn-outline-primary my-2 my-sm-0" %>
+    <% end %>
+  </form>
 </div>
 <div class="container">
   <div class="cards">
     <% @watches.each do |watch| %>
       <%= link_to(watch_path(watch)) do %>
         <div class="card-product">
-          <%= cl_image_tag watch.photo.key %>
+          <% if watch.photo.key? %>
+            <%= cl_image_tag watch.photo.key %>
+          <% else %>
+            <%= cl_image_tag("Watches/Rolex_Datejust_akxpza.jpg") %>
+          <% end %>
           <div class="card-product-infos">
             <h2><%= watch.brand %></h2>
             <p><%= watch.condition %></p>

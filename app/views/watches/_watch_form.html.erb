@@ -1,3 +1,4 @@
+<div class="container" >
 <h1>Sell your watch</h1>
 <%= simple_form_for ( @watch ) do |f| %>
   <%= f.input :brand %>
@@ -6,5 +7,6 @@
   <%= f.input :price %>
   <%= f.input :model_year %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit watch", class: "btn btn-outline-primary" %>
+  <%= f.submit "Submit watch", class: "btn btn-primary" %>
 <% end %>
+</div>
