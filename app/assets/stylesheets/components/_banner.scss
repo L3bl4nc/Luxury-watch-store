@@ -1,0 +1,58 @@
+.banner {
+  // background-image: url(https://source.unsplash.com/random);
+  // background-image: asset-url('watch-homepage-banner.jpg');
+  background-image: linear-gradient(rgba(255,255,255,0.2) 0%, rgba(0,0,0,0.2) 100%), url('watch-homepage-banner.jpg');
+  background-position: center;
+  height: 600px;
+  background-size: cover;
+  margin: 20px;
+  border-bottom-left-radius: 80px 80px;
+  border-right: thick double #efe35b;
+  p {font-family: $headers-font}
+  }
+
+.banner h1 {
+  color: white;
+  font-size: 90px;
+  }
+
+.banner-container {
+  // margin-top: 20px;
+  // margin-bottom: 20px;
+  // to test:
+  // border: 5px solid green;
+  padding: 80px 50px 20px 90px;
+  }
+
+.btn-primary {
+  padding: 14px 30px;
+  background-color: #40a5e7!important;
+  height: 38px!important;
+  padding: 0px!important;
+  width: 80px!important;
+  border-radius: 0px 25px 25px 0px!important;
+}
+
+.form-control {
+  width: 50%;
+  border-radius: 25px 0px 0px 25px;
+}
+
+.searchbar-form {
+  form {
+  display: flex;
+  justify-content: flex-start;
+  width: 500px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// add linear gradient
